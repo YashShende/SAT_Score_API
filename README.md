@@ -38,4 +38,4 @@ This repository contains a simple Flask API for managing SAT scores.
 Run the unit tests using the provided `unit test runner.bat`:
 
 ```bash
-unit test runner.bat
+unit_test_runner.bat
