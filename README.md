@@ -19,14 +19,19 @@ This repository contains a simple Flask API for managing SAT scores.
 
 1. Install Python (if not already installed).
 
-2. Run the API:
+2. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Run the API:
     - For `appSQL.py`:
         ```bash
         python appSQL.py
         ```
     - Alternatively, you can use `start_api_server.bat` for convenience.
 
-3. Access the API at [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
+4. Access the API at [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
 
 ## Unit Tests
 
