@@ -1,0 +1,108 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "SAT_Score_API_Test_Collection",
+    "dateExported": "2023-12-13T16:59:37.319Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "4fd4428f-1d92-4c00-a9ff-d0b4b7c9ec11",
+            "colId": "05ddc1da-ea52-4643-bd6b-5298b602fa63",
+            "containerId": "",
+            "name": "Insert candiate Score Endpoint",
+            "url": "127.0.0.1:5000/scores",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-12-13T15:05:42.154Z",
+            "modified": "2023-12-13T15:05:42.154Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"Ram\",\n    \"address\": \"Somewhere in india\",\n    \"city\": \"Nagpur\",\n    \"country\": \"India\",\n    \"pincode\": \"332232\",\n    \"sat_score\": 35\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "882a88db-6024-4963-bd9e-f56d97d2c084",
+            "colId": "05ddc1da-ea52-4643-bd6b-5298b602fa63",
+            "containerId": "",
+            "name": "Export scores to json Endpoint",
+            "url": "127.0.0.1:5000/export",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-12-13T16:53:42.108Z",
+            "modified": "2023-12-13T16:53:42.108Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "004ae74f-e08a-4376-b4a7-ba4349a0a651",
+            "colId": "05ddc1da-ea52-4643-bd6b-5298b602fa63",
+            "containerId": "",
+            "name": "Delete the score Endpoint",
+            "url": "127.0.0.1:5000/scores/yash",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2023-12-13T16:55:41.587Z",
+            "modified": "2023-12-13T16:55:41.587Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7e540eb2-7a61-40f5-8708-4a046a48aa8d",
+            "colId": "05ddc1da-ea52-4643-bd6b-5298b602fa63",
+            "containerId": "",
+            "name": "Get Rank by Name Endpoint",
+            "url": "127.0.0.1:5000/rank/Ram",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-12-13T16:56:08.251Z",
+            "modified": "2023-12-13T16:56:08.251Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"Ram\",\n    \"address\": \"Somewhere in Ayodya\",\n    \"city\": \"Prayagraj\",\n    \"country\": \"India\",\n    \"pincode\": \"332232\",\n    \"sat_score\": 35\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "19ffc06a-89ca-4efc-a8e3-1a866d2f2a03",
+            "colId": "05ddc1da-ea52-4643-bd6b-5298b602fa63",
+            "containerId": "",
+            "name": "Update Score Endpoint",
+            "url": "127.0.0.1:5000/scores/Ram",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2023-12-13T16:56:36.522Z",
+            "modified": "2023-12-13T16:56:36.522Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"sat_score\": 55,\n  \"name\": \"ramesh\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0001151a-190c-4cf7-8de6-42be5cc7a702",
+            "colId": "05ddc1da-ea52-4643-bd6b-5298b602fa63",
+            "containerId": "",
+            "name": "Get All Scores Endpoint",
+            "url": "127.0.0.1:5000/scores",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-12-13T16:58:28.986Z",
+            "modified": "2023-12-13T16:58:28.986Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

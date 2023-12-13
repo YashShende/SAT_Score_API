@@ -1,6 +1,9 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify,send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import IntegrityError
+import os
+import json
+
 
 app = Flask(__name__)
 
@@ -112,6 +115,34 @@ def delete_record(name):
         return jsonify({'message': 'Record deleted successfully'})
     else:
         return jsonify({'message': 'Candidate not found'}), 404
+    
+
+@app.route('/export', methods=['GET'])
+def backup_scores():
+    # Fetch all data from the database
+    all_results = SATResult.query.all()
+
+    # Convert the data to a list of dictionaries
+    result_list = [
+        {
+            'name': result.name,
+            'address': result.address,
+            'city': result.city,
+            'country': result.country,
+            'pincode': result.pincode,
+            'sat_score': result.sat_score,
+            'passed': result.passed
+        }
+        for result in all_results
+    ]
+
+    # Save the data to a JSON file
+    file_path = 'scores.json'
+    with open(file_path, 'w') as json_file:
+        json.dump(result_list, json_file, indent=2)
+
+    # Provide a download link for the JSON file
+    return send_from_directory(os.getcwd(), 'scores.json', as_attachment=True)
 
 if __name__ == '__main__':
     with app.app_context():      

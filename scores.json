@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Ram",
+    "address": "Somewhere in india",
+    "city": "Nagpur",
+    "country": "India",
+    "pincode": "332232",
+    "sat_score": 35,
+    "passed": "Pass"
+  },
+  {
+    "name": "Yash",
+    "address": "Somewhere in China",
+    "city": "Wuhan",
+    "country": "China",
+    "pincode": "3322DD2",
+    "sat_score": 39,
+    "passed": "Pass"
+  }
+]
